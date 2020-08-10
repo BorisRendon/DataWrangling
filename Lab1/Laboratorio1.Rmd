@@ -1,0 +1,106 @@
+---
+title: "Laboratorio1"
+author: "Boris Rendon"
+date: "7/8/2020"
+output: rmarkdown::github_document
+---
+#### Librerias a importar
+```{r}
+library(readr)
+library(readxl)
+library(tidyverse)
+library(tidytext)
+library(tidyverse)
+
+```
+
+### Problema 1
+
+#### Escenario 
+Ha sido contratado para trabajar en una consultoría a una embotelladora nacional. La             embotelladora se encarga de distribuir su producto a distintos clientes, utilizando diferentes            equipos de transporte y pilotos.  
+ 
+Se le ha enviado un set de archivos de las entregas del año 2018.  
+
+
+*Unificar todos los archivos en una tabla única.  
+```{r ,echo=TRUE}
+allfiles <- list.files(pattern = 'xlsx')
+print(allfiles)
+rawdata <-lapply(allfiles,read_excel)
+
+```
+
+* Agregar la fecha a cada lista
+```{r}
+addColumn <- function (file, dates){
+  n<-substr(deparse(dates), 2, 8)
+  newColumn <- rep(n, nrow(file))
+  newFile <- file %>% add_column(FECHA=newColumn)
+  return (newFile)
+}
+finalfiles <- mapply(addColumn,rawdata,allfiles)
+
+
+```
+
+* Limpieza de dato y creacion del csv
+
+```{r}
+final <- finalfiles %>% map_df(~finalfiles,.x)
+final$TIPO<-NULL
+final$...10<-NULL
+
+
+write_excel_csv2(final,'InformacionUnificada.csv',delim = ',')
+
+
+```
+
+
+### Problema 2
+
+* Utilizando la funcion Lapply, encuentre la moda de cada vector de una lista de por lo menos 3 vectores 
+
+
+Creando una lista con 3 vectores, 2 numericos y uno de caracteres, todos de tamano 15
+```{r}
+lista <- list(sample(1:5,size = 15,replace = TRUE ), sample(letters,size=15, replace = TRUE), sample(1:5,size = 15,replace = TRUE))
+
+lista
+
+
+```
+Creando funcion para encontrar la moda
+```{r}
+
+getmode <- function(v){
+  value = unique(v)
+  value[which.max(tabulate(match(v,value)))]
+  
+  
+  
+}
+
+# Llamar funcion para determinar la moda usando lapply
+
+lapply(lista,getmode)
+```
+
+
+
+### Problema 3
+
+Descargar y leer el archivo de parque vehicular enero 2020.
+
+```{r}
+SAT<-read_delim("INE_PARQUE_VEHICULAR_080220.txt", delim = '|')
+head(SAT)
+```
+
+
+
+
+
+
+
+
