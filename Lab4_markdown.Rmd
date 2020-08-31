@@ -1,0 +1,62 @@
+---
+title: "Laboratorio 4"
+author: "Boris Rendon"
+date: "30/8/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## ¿Debemos de invertir en la contratación de más personal?
+
+* En este caso no recomendaríamos la contratación de más personal ya que esta bien la cantidad que se maneja actualmente con los clientes que se tienen.
+
+
+
+## ¿Debemos de invertir en la compra de más veículos de distribución? ¿Cuántos y de qué tipo?
+
+* La empresa cuenta con tres tipos de vehículos. *Camión grande* , *camión pequeno* y *panel*. De los 2180 envíos que fueron realizados en estos 11 meses podemos decir que el **52.56%** de los envios fueron en camión grande, **27.76%** en camion pequeno y solo el **16.7%** fueron hechos por las páneles. Nosotros no recomendamos la compra de más vehículos ya que de momento la empresa solo cuenta con *13 clientes* y *9 pilotos*. De necesitar más vehículos de distribución recomendamos tercerizar el servicio con una empresa de logística para ahorrar costos de mantenimiento, seguros, depresiaciones y pasivo laboral.
+
+
+## Las tarifas actuales, ¿Son aceptables por el cliente?
+
+* Para analizar la informacion que se nos dió decidimos realizar la comparacion por trimestres. Por cada trimestre analizamos el total de envios, la media de la cantidad de productos vendida y la media del total cobrado.
+
+
+  * El primer trimestre tenemos un total de **577** ventas habiendo vendido en promedio **1,109** unidades y cobrado **Q 277.48** 
+
+  * El segundo trimestre tenemos un total de **608** ventas (un aumento del 5.37% con respecto al primer trimestre) habiendo vendido en promedio **1079** unidades (una dismninucion de 2.7%) unidades y cobrado **Q 269.81** (una disminución del 2.8%).
+
+  * El tercer trimestre tenemos un total de **598** ventas (una disminución del 1.6% con respecto al segundo trimestre) habiendo vendido en promedio **1080** unidades y cobrado **Q 270**
+
+  * En el cuarto trimestre hay que resaltar que la información **no incluye al mes de dicembre**. Tenemos un total de **397** ventas, habiendo vendido en promedio **1140** unidades y cobrado **Q 285.21**
+
+Con esta información deducimos que los clientes si estan satisfechos con las tarifas actuales porque no existe una diferencia notable en los cambios de ventas y cobros por trimestre. Lo que recommendamos es tratar de mejorar las tarifas para que se vuelvan aún más atractivas para los clientes así en lugar de estar estables cada vez se mejoran esos números.
+
+
+## ¿Nos estan robando los pilotos? 
+* Para responder esta pregunta cabe resaltar que los clientes marcados con */ faltante* fueron tomados como segundos envios porque no estaba completo el pedido la primera vez.
+
+* Las razones por las cuales el pedido estaba incompleto pueden ser varios pero puede que exista el caso que se están robando producto los pilotos o los que despachan en bodega, lo que si podemos asegurar es que  de las 2180 entregas realizadas, un total de **712** entregas fueron incompletas (un 32.66%). No podemos asegurar si se están robando el producto pero si que hay una cantidad considerable de entregas incompletas.
+
+## ¿Qué estrategias debo de seguir?
+
+* Un dato que nos pareció importante que está afectando el flujo de caja es el tipo de crédito que se está dando a los clientes. Según los expertos los créditos más largos son los más peligrosos porque significa que el dinero no va a entrar en *juego* durante este tiempo. Segun los datos proporcionados los creditos de **30 días** represetan un **35.37%** del total, los de **60 días** representan un **34.31%** y los créditos de **90 días** representan un **30.32%** del total, nosotros creemos que este factor es el que esta afectando al flujo de caja porque hay muchos créditos a 60 y 90 días, lo cual significa que estaremos gastanto dinero que aún no tenemos durante ese plazo. Recomendamos disminuir los créditos de 90 días para que el flujo de caja esté más activo.
+
+* La segunda recomendación es contratar un sevicio de seguridad que vigile a los de bodega porque a nuestro criterio hay demasiadas entregas faltantes,también mejorar el control de calidad porque hay 119 entregas que fueron devueltas. Tanto las entregas faltantes como las devoluciones representan un costo innecesario que afecta 
+
+
+## Cuales fueron nuestros mejores pilotos y el transporte más efectivo?
+
+* Actualmente la empresa cuenta con 9 pilotos. Los criterios para elegir al mejor piloto fueron los siguientes :
+  * Cantidad de viajes.
+  * El que más facturó.
+  * El que menos entregas marcadas como *faltantes* tenga.
+  
+  
+![cantidad de viajes](cantidad_viajess.jpg)
+
+Fernado Mariano Berrio es el que más viajes tiene.
+
