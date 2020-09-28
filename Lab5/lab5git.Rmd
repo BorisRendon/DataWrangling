@@ -1,0 +1,103 @@
+---
+title: "Laboratorio 5"
+author: "Boris Rendon"
+date: "27/9/2020"
+output: github_document
+---
+
+
+```{r}
+library(lubridate)
+library(readxl)
+library(dplyr)
+library(nycflights13)
+```
+## Parte 1
+```{r Parte 1: Predecir un eclipse solar}
+eclipse_inicial <- dmy_hms('21 aug 2017 18:26:40')
+synodic_month <- days(29)+hours(12)+minutes(44)+seconds(3)
+saros <- synodic_month * 223
+
+prox_eclipse <- eclipse_inicial %m+% saros
+prox_eclipse
+
+```
+
+
+### PARTE 2
+```{r Parte 2: Agrupaciones y operaciones con fechas}
+data <- read_excel("data.xlsx")
+
+data <- data[data$Cod !=0,]
+
+data$`Fecha Creación` <- dmy(data$`Fecha Creación`)
+data$`Fecha Final` <- dmy(data$`Fecha Final`)
+
+
+data$month <- month(data$`Fecha Creación`)
+
+mesocupado <- data %>%  select(Cod,Call,month) %>% group_by(month,Cod) %>% 
+  summarise(Cantidad= sum(Call), .groups= 'drop') %>% arrange(desc(Cantidad))
+View(mesocupado)
+
+View(mesocupado[1:5,])
+```
+
+```{r 2: Que dia es mas ocupado}
+data$dia <- weekdays(data$`Fecha Creación`)
+
+dia_ocupado <- data %>%  group_by(dia) %>% 
+  summarise(Cantidad= n() , .groups = 'drop') %>%  arrange(desc(Cantidad))
+
+View(dia_ocupado)
+
+
+```
+```{r 2: Que mes es mas ocupado}
+
+```
+
+### PARTE 3
+```{r parte 3 signo zodiacal}
+
+#voy a hacer funcion para que con el input birthay saque su signo
+
+zodiac <- function(birthday){
+  birth <- dmy(birthday)
+  
+}
+
+
+```
+
+## Parte 4
+```{r 4: genere 4 nuevas columnas para cada variable con formato fecha y hora}
+formateo <- function(year,month,day,ttime){
+  make_datetime(year,month,day,time  %/% 100, time %% 100 )
+  
+
+}
+
+cols <- flights %>% 
+    mutate(deptime=format_time(year,month,day,dep_time),
+           arrtime = format_time(year,month,day,arr_time),
+           schdarr= format_time(year,month,day,sched_arr_time),
+           schdep= format_time(year,month,day,sched_dep_time))
+
+cols %>%  select(carrier,deptime,arrtime,schdarr,schdep)
+```
+
+```{r 4:Encuentre el delay total que existe en cada vuelo. El delay total se puede encontrar sumando el delay de la salida y el delay de la entrada.}
+
+
+delays <- flights %>%  select(flight ,dep_delay,arr_delay) %>% 
+  mutate(totalDelay= minutes(dep_delay+arr_delay)) %>% 
+  select(flight,totalDelay)
+
+
+head(delays)
+```
+
+
+
+
