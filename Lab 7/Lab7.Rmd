@@ -1,0 +1,116 @@
+---
+title: "Inversiones en Energía, S.A. de C.V"
+author: "Boris Rendon"
+date: "11/10/2020"
+output: pdf_document
+---
+
+
+Este documento ha sido solicitado por el gerente de Inversiones en Energía, S.A. El motivo del mismo fue para poder hacer algunas recomendaciones y entender porqué en el año 2017 funcionó de esa manera.
+
+Como primer punto vamos a repasar el estado de resultados.
+
+Antes de empezar voy a explicar el funcionamiento de la empresa y aclarar algunos puntos para evitar malos entendidos o ambiguedades a lo largo del documento.
+
+* La empresa se dedica a la reparación de postes de luz.
+* La empresa cuenta con tres tipos de vehículos **Camión** , **Pickup** y **moto**. Cada vehículo tiene un costo fijo y un costo directo.
+* La empresa cuenta con 4 ubicaciones distintas de salida.
+* Los postes se diferencian por su **ID** y también tienen distintas alturas en pies. (8,10,12,14 y 16).
+* La información también está dividida por cuanto tiempo se tardó la reparación.
+
+Ahora si, con el estado de resultados.
+
+En el 2017 se facturó un total de **Q36,688,096.00** y la distribución de ganancia y costo quedó de la siguiente manera:
+
+
+![Estado de resultados](estado_de_resultados.jpg)
+Teniendo una ganancia de **Q8,514077.00**
+
+Ahora vamos a repasar más a fondo los vehículos.
+* Los valores que estan dentro de la gráfica es la ganancia por cada vehículo.
+
+# Ganancias
+
+* El camion representa un **33%** de nuestras ganancias.
+* El pickup representa un **63%** de nuestras ganancias.
+* La moto representa un **4%** de nuestras ganancias.
+
+
+# Costos
+
+* El camion representa un **31%** de nuestros costos.
+* El pickup representa un **68%** de nuestros costos.
+* La moto representa un **1%** de nuestros costos.
+
+
+
+*La moto aunque nos genere solamente un 4% de ganancia nos sale rentable porque solamente nos representa un 1% de costo, es decir 3 veces menos.
+
+
+
+
+# Uso por vehículo
+
+* La empresa cuenta con tres vehículos de los cuales el que más se usa es el pickup , representando un **74%** del total, le sigue el camión con un **24%** y por último la moto que representa un **2%**.
+
+Teniendo en cuenta esto el costo por viaje de cada vehículo quedó de la siguiente manera:
+
+* **Q140** por el camión y la tarifa es de **Q184**
+* **Q97.69** por el pickup y la tarifa es de **125.2**
+* **Q68.78** por la moto y la tarifa es de **Q126.46**
+
+Estas tarifas son aceptadas por los clientes y podemos confirmarlo porque tenemos varias visitas al mismo poste, entonces significa que tenemos clientes recurrentes.
+
+
+
+
+
+A continuación vamos a ver qué vehículo atendió más postes:
+
+![Postes](postes.jpg)
+
+Podemos ver que el vehículo que más se usa independientemente de la altura del poste es el PickUp y el que menos se usa es la moto.
+
+
+
+
+
+
+Ahora vamos a ver qué ubicaciones son las mas usadas y qué vehículo las utiliza más: 
+
+![Ubicaciones](ubicaciones.jpg)
+Vemos que las dos ubicaciones más recurridas son las 150224 y la 150277. Por lo que recomiendo que después de hacer el estudio necesario, si se decide abrir una sede más, lo ideal sería abrir una sede que quede cerca de esas dos (asumiendo que son sedes cercanas).
+
+
+
+
+Otra cosa muy importante es ver los motivos de visita y a continuación vamos a ver una gráfica que lo muestra:
+
+![Motivos de visita](visita.jpg)
+Esta grafica nos muestra que el pickup es el vehículo que se usa más para todas los motivos de visita excepto por el motivo de ‘correccion’ donde el camión es sumamente superior y el apartado ‘otros’. Una vez más el vehículo de motocicleta no representa ningún dato importante. Realizó mas visitas que el pickup por cambio de fusible pero menos que el camión.
+
+
+Y por último vamos a ver la gráfica de distribución de tiempo : 
+
+![tiempo de visita](tiempovisita.jpg)
+El pickup es una vez más el que más se usa, esta vez medido en tiempo. El camion solo se usa más cuando las visitas son de 120 minutos o más. Este motivo puede ser explicado con la gráfica anterior, que explica que el camion se usa mucho más para visitas de correción, puede ser que ese tipo de visitas sea muy tardado y el equipo muy grande y por eso tienen que ir en camion.
+
+
+
+
+De los 74239 postes distintos que antendimos durante el año, los más importantes son los siguientes: 
+
+![postes mas importantes](postesimp.jpg)
+Para esta gráfica solo se tomaron en cuenta los postes en los que se trabajaron 100 o más veces.
+
+
+
+
+# Sugerencias y estrategias a seguir
+
+* Como consultor recomendaría seguir trabajando de esta manera ya que estamos teniendo un excelente margen.
+* Aunque parezca que la moto casi no se usa, nos genera un 4% de ganancia con un 1% de costo, lo cual aunque sea bajo, sigue siendo ganancia por lo cual recomiendo quedarnos con ese vehículo.
+* Los camiones son necesarios para algunos trabajos que los demas vehículos no pueden realizar.
+
+
+
